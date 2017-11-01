@@ -1,0 +1,16 @@
+{
+  "name": "fake-twitter",
+  "version": "1.0.0",
+  "description": "Like twitter but not really",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}

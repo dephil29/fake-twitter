@@ -1,0 +1,34 @@
+<!-- views/pages/index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+
+    <header>
+      <% include ../partials/header %>
+      <h2 class="text-center"><%= tagLine %></h2>
+    </header>
+
+    <main>
+      <div class="text-center table">
+        <div class="content">
+        <% things.forEach(function(thing){ %>
+          <span><%= thing.user.name %> @ <%= thing.user.screen_name %></span>
+          <span>"<%= thing.user.description %>"</span>
+          <span class="texter"><%= thing.text %></span>
+          <span>minions: <%= thing.user.followers_count %> * listed: <%= thing.user.listed_count %> * faves: <%= thing.user.favourites_count %> * <%= thing.user.location %></span>
+        <% }); %>
+        </div>
+        <br>
+      </div>
+    </main>
+
+    <footer class="text-center">
+      <p>Welcome to Fake Twitter!! Write things.</p>
+      <% include ../partials/footer %>
+    </footer>
+
+</body>
+</html>
