@@ -12,17 +12,18 @@
     </header>
 
     <main>
+      <% things.forEach(function(thing){ %>
       <div class="text-center table">
         <div class="content">
-        <% things.forEach(function(thing){ %>
           <span><%= thing.user.name %> @ <%= thing.user.screen_name %></span>
           <span>"<%= thing.user.description %>"</span>
           <span class="texter"><%= thing.text %></span>
           <span>minions: <%= thing.user.followers_count %> * listed: <%= thing.user.listed_count %> * faves: <%= thing.user.favourites_count %> * <%= thing.user.location %></span>
-        <% }); %>
         </div>
         <br>
       </div>
+      <br>
+      <% }); %>
     </main>
 
     <footer class="text-center">
